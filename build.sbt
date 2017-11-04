@@ -1,4 +1,4 @@
-name := "rmj-sorting-alg"
+name := "rmj-spark-pgm"
 
 version := "1.0"
 
@@ -33,6 +33,11 @@ libraryDependencies ++= Seq(
   "org.apache.spark"      %% "spark-streaming"  % sparkVersion,
   "org.elasticsearch"     %% "elasticsearch-spark"        %     sparkElasticVersion,
   "org.apache.spark"      %% "spark-streaming-kafka"     % sscKafkaVersion,
-  "org.mongodb.spark"      % "mongo-spark-connector_2.11" %  sparkMongoVersion,
+  "org.mongodb.spark"      % "mongo-spark-connector_2.11" %  sparkMongoVersion
   )
 scalacOptions ++= Seq("-unchecked", "-deprecation")
+
+assemblyMergeStrategy in assembly := {
+ case PathList("META-INF", xs @ _*) => MergeStrategy.discard
+ case x => MergeStrategy.first
+}

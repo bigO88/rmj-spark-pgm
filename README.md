@@ -1,11 +1,13 @@
 This repo is for implementation of spark and scala concept :
 
-1.) paired rdd.
+1.) rdd, paired rdd.
 
-2.) action
+2.) Action
 
-3.) transformation
+3.) Transformation
 
-4.) spark sql
+4.) Spark sql
 
-5.) spark streaming
+5.) Spark streaming
+
+Please feedback at : rajjanwa@gmail.com

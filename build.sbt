@@ -18,8 +18,7 @@ val sparkCassandraVersion = "1.6.0"
 ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) }
 
 resolvers ++= Seq(
-  "All Spark Repository -> bintray-spark-packages" at "https://dl.bintray.com/spark-packages/maven/",
-  
+  "All Spark Repository -> bintray-spark-packages" at "https://dl.bintray.com/spark-packages/maven/"
 )
 
 resolvers += "Typesafe" at "http://repo.typesafe.com/typesafe/releases/"

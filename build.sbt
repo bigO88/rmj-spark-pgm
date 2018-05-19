@@ -42,6 +42,10 @@ libraryDependencies ++= Seq(
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % "test"
 
+// https://mvnrepository.com/artifact/com.datastax.spark/spark-cassandra-connector
+libraryDependencies += "com.datastax.spark" %% "spark-cassandra-connector" % "2.3.0"
+
+
 scalacOptions ++= Seq("-unchecked", "-deprecation")
 
 assemblyMergeStrategy in assembly := {

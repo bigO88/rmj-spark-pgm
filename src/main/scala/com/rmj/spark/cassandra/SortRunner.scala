@@ -1,4 +1,4 @@
-package com.rmj.sorting
+package com.rmj.spark.cassandra
 
 import org.apache.spark.{SparkConf, SparkContext}
 

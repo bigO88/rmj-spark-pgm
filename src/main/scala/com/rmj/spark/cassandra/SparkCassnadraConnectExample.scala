@@ -1,4 +1,4 @@
-package com.rmj.sorting
+package com.rmj.spark.cassandra
 
 import com.datastax.spark.connector._
 import org.apache.spark.SparkContext

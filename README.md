@@ -1,8 +1,7 @@
 
 Travis CI: build status 
 
-https://travis-ci.org/bigO88/rmj-spark-pgm.svg?branch=master
-
+[![Build Status](https://travis-ci.org/bigO88/rmj-spark-pgm.svg?branch=master)](https://travis-ci.org/bigO88/rmj-spark-pgm)
 
 
 

@@ -1,3 +1,11 @@
+
+Travis CI: build status 
+
+https://travis-ci.org/bigO88/rmj-spark-pgm.svg?branch=master
+
+
+
+
 This repo is for implementation of spark and scala concept :
 
 1.) rdd, paired rdd.

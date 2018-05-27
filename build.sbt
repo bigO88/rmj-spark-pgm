@@ -2,6 +2,38 @@ name := "rmj-spark-pgm"
 
 version := "1.0.0"
 
+//sbt native package enable start here
+
+lazy val root = (project in file(".")).enablePlugins(JavaAppPackaging,DebianPlugin)
+
+maintainer := "Raj Janwa <rajjanwa@gmail.com>"
+
+packageSummary := "Debian Package"
+
+packageDescription := """package description of our software,"""
+
+daemonUser in Linux := "rajjanwa"
+
+daemonGroup in Linux := "rmj"
+
+// we specify the name for our fat jar
+jarName in assembly := "assembly-spark-rmj-project.jar"
+
+// removes all jar mappings in universal and appends the fat jar
+mappings in Universal := {
+    // universalMappings: Seq[(File,String)]
+    val universalMappings = (mappings in Universal).value 
+    val fatJar = (assembly in Compile).value
+    // removing means filtering
+    val filtered = universalMappings filter { 
+        case (file, name) =>  ! name.endsWith(".jar") 
+    }
+    // add the fat jar
+    filtered :+ (fatJar -> ("lib/" + fatJar.getName))
+}
+
+// sbt native package ennble end here
+
 //Older Scala Version
 scalaVersion := "2.11.8"
 

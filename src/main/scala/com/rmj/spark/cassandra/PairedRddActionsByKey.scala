@@ -11,10 +11,10 @@ object PairedRddActionsByKey {
 
     println("PairedRddActionsByKey application running....")
 
-    val conf = new SparkConf().setAppName("Sorting Application").setMaster("local[*]")
+    val conf = new SparkConf().setAppName("Sorting Application") //.setMaster("local[*]")
     val sc = new SparkContext(conf)
-    val inFilePath = "/home/rajjanwa/data/input/input_records.csv"
-    val outFilePath = "/home/rajjanwa/data/output/"
+    val inFilePath = args(0) //"/home/rajjanwa/data/input/input_records.csv"
+    val outFilePath = args(1)  //"/home/rajjanwa/data/output/"
     val rdd = sc.textFile(inFilePath)
     val employeeRdd = rdd.map { x =>
       Employee(x.split(",", -1)(0), x.split(",", -1)(1), x.split(",", -1)(2), x.split(",", -1)(3))

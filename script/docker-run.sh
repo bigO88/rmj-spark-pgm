@@ -17,7 +17,7 @@ case $1 in
 1)  
 
 echo "Cloudera QuickStart docker starting....."
-docker run --hostname=quickstart.cloudera --privileged=true -d -t -i -p 8888 -p 8080 cloudera/quickstart /usr/bin/docker-quickstart -v /home/rajjanwa/docker-shared:/data
+docker run --hostname=quickstart.cloudera --privileged=true -d -t -i -p 8888 -p 8080 -v /home/rajjanwa/docker-shared:/data cloudera/quickstart:latest  /usr/bin/docker-quickstart
 rc=$?
 if [ $rc -eq 0 ]
 then

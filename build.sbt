@@ -76,6 +76,9 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % "test"
 
 // https://mvnrepository.com/artifact/com.datastax.spark/spark-cassandra-connector
 libraryDependencies += "com.datastax.spark" %% "spark-cassandra-connector" % "2.3.0"
+// https://mvnrepository.com/artifact/com.twitter/hbc-core
+libraryDependencies += "com.twitter" % "hbc-core" % "2.2.0"
+
 
 
 scalacOptions ++= Seq("-unchecked", "-deprecation")
